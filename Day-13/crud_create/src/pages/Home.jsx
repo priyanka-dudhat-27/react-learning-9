@@ -23,7 +23,7 @@ const Home = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        // setUsers([...users, data]); // Add the new user to the existing users array
+        setUsers([...users, data]); // Add the new user to the existing users array
         alert("Data added successfully");
         setName("");
         setEmail("");
