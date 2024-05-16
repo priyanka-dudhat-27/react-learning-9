@@ -5,8 +5,8 @@ const Home = () => {
     const {theme,handleThemeChange}=useContext(ThemeContext)
     console.log("theme",theme)
   return (
-    <div style={{backgroundColor:theme?"white":"black",width:"100vw",height:"100vh"}}>
-        <button onClick={handleThemeChange}>Theme</button>
+    <div style={{backgroundColor:theme?"black":"white",width:"100vw",height:"100vh"}}>
+        <button onClick={handleThemeChange} >Theme</button>
     </div>
   )
 }
