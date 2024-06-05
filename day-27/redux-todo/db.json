@@ -1,0 +1,17 @@
+{
+  "todo": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "todo": "abc",
+      "id": 2
+    },
+    {
+      "todo": "abc",
+      "id": 3
+    }
+  ]
+}
