@@ -1,11 +1,13 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import { ADD_TODO, GET_TODO } from '../Redux/ActionType'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 const Todo = () => {
     const [inputData,setInputData]=useState("")
     const dispatch=useDispatch()
+    const todoData=useSelector(store=>store.todo)
+    console.log(todoData)
     const handleSubmit=(e)=>{
         e.preventDefault()
         axios.post("http://localhost:8080/todo",{
@@ -32,6 +34,16 @@ const Todo = () => {
             <input type="text" placeholder='enter your task' value={inputData} onChange={(e)=>{setInputData(e.target.value)}} />
             <button>Add</button>
         </form>
+
+        {
+            todoData.map((item)=>{
+                return(
+                    <div key={item.id}>
+                        <h3>{item.todo}</h3>
+                    </div>
+                )
+            })
+        }
     </div>
   )
 }
