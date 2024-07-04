@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useReducer } from 'react';
 
 const UseReducer = () => {
